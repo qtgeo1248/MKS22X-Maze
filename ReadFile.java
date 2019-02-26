@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class ReadFile {
     public static void main(String[] args) {
@@ -31,6 +32,11 @@ public class ReadFile {
                     maze[currentRow][i] = line.charAt(i);
                 }
                 currentRow++;
+            }
+
+            System.out.println();
+            for (int i = 0; i < maze.length; i++) {
+                System.out.println(maze[i]);
             }
         } catch (FileNotFoundException e) {
             System.out.println("NO FILE");
