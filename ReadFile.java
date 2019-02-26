@@ -22,6 +22,8 @@ public class ReadFile {
                 }
             }
 
+            System.out.println("\n" + numRows + ", " + numCols);
+
             in = new Scanner(f); //resets the scanner
             char[][] maze = new char[numRows][numCols];
             int currentRow = 0;
