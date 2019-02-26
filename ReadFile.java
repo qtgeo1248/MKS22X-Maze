@@ -20,6 +20,8 @@ public class ReadFile {
                     }
                 }
             }
+
+            System.out.println("" + numRows + ", " + numCols);
         } catch (FileNotFoundException e) {
             System.out.println("NO FILE");
         }
