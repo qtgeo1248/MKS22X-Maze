@@ -12,8 +12,12 @@ public class ReadFile {
             while (in.hasNextLine()) { //this prints out each line
                 String line = in.nextLine();
                 System.out.println(line);
-                numRows++;
-
+                numRows++; //keeps track of num of rows for array of chars
+                if (numRows == 1) { //counts the number of columns
+                    for (int i = 0; i < line.length(); i++) {
+                        
+                    }
+                }
             }
         } catch (FileNotFoundException e) {
             System.out.println("NO FILE");
