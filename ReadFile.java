@@ -25,9 +25,9 @@ public class ReadFile {
             char[][] maze = new char[numRows][numCols];
             int currentRow = 0;
 
-            while(int.hasNextLine()) {
+            while (in.hasNextLine()) {
                 String line = in.nextLine();
-                for (int i = 0; i < line.lenght(); i++) {
+                for (int i = 0; i < line.length(); i++) {
                     maze[currentRow][i] = line.charAt(i);
                 }
                 currentRow++;
