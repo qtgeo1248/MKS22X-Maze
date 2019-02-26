@@ -21,7 +21,8 @@ public class ReadFile {
                 }
             }
 
-            System.out.println("" + numRows + ", " + numCols);
+            in = new Scanner(f); //resets the scanner
+            char[][] maze = new char[numRows][numCols];
         } catch (FileNotFoundException e) {
             System.out.println("NO FILE");
         }
