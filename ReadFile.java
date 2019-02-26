@@ -23,6 +23,15 @@ public class ReadFile {
 
             in = new Scanner(f); //resets the scanner
             char[][] maze = new char[numRows][numCols];
+            int currentRow = 0;
+
+            while(int.hasNextLine()) {
+                String line = in.nextLine();
+                for (int i = 0; i < line.lenght(); i++) {
+                    maze[currentRow][i] = line.charAt(i);
+                }
+                currentRow++;
+            }
         } catch (FileNotFoundException e) {
             System.out.println("NO FILE");
         }
