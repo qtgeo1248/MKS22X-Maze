@@ -30,7 +30,15 @@ public class Maze {
         while (in.hasNextLine()) {
             String line = in.nextLine();
             for (int i = 0; i < line.length(); i++) {
-                maze[currentRow][i] = line.charAt(i);
+                char currentCell = line.charAt(i);
+                if (currentCell == 'S') {
+                    if (hasStart == false) {
+                        hasStart = true;
+                    } else {
+                        throw new IllegalStateException();
+                    }
+                }
+                maze[currentRow][i] = currentCell;
             }
             currentRow++;
         }
