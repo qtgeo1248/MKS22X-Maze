@@ -38,6 +38,13 @@ public class Maze {
                         throw new IllegalStateException();
                     }
                 }
+                if (currentCell == 'E') {
+                    if (hasGoal == false) {
+                        hasGoal = true;
+                    } else {
+                        throw new IllegalStateException();
+                    }
+                }
                 maze[currentRow][i] = currentCell;
             }
             currentRow++;
