@@ -24,6 +24,8 @@ public class Maze {
         in = new Scanner(f); //resets the scanner
         maze = new char[numRows][numCols];
         int currentRow = 0;
+        boolean hasStart = false;
+        boolean hasGoal = false;
 
         while (in.hasNextLine()) {
             String line = in.nextLine();
