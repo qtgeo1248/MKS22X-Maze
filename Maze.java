@@ -104,6 +104,13 @@ public class Maze {
 
         if (maze[row][col] == 'S') {
             return 0;
+        } else if (maze[row][col] == ' ') {
+            maze[row][col] = '@';
+            int count = solve(row + 1, col) + solve(row, col + 1) + solve(row - 1, col) + solve(row, col - 1);
+            if (count == -4) { //this is when you're at a dead end
+                maze[row][col] = '.';
+                return -1;
+            }
         }
 
         return -1; //temp
