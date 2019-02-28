@@ -38,6 +38,7 @@ public class Driver {
 
         try {
             Maze test = new Maze("data1.dat");
+            System.out.println(test.solve());
             System.out.println(test + "\n");
 
 

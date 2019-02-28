@@ -110,7 +110,7 @@ public class Maze {
             boolean foundWay = false;
             int step = 0;
             for (int i = 0; i < OPTIONS.length && !foundWay; i += 2) {
-                int current = solve(row + OPTIONS[i], col + OPTIONS[i]) + 1;
+                int current = solve(row + OPTIONS[i], col + OPTIONS[i + 1]);
                 if (current >= 0) {
                     foundWay = true;
                     step = current + 1;
