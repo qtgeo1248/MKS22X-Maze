@@ -103,7 +103,7 @@ public class Maze {
             wait(20);
         }
 
-        if (maze[row][col] == 'S') {
+        if (maze[row][col] == 'E') {
             return 0;
         } else if (maze[row][col] == ' ') {
             maze[row][col] = '@';
@@ -119,8 +119,8 @@ public class Maze {
             } else {
                 return count;
             }
+        } else { //these are cases when it's '@', '.', or '#'
+            return -1;
         }
-
-        return -1; //temp
     }
 }
