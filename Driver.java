@@ -38,10 +38,16 @@ public class Driver {
 
         try {
             Maze test = new Maze("data1.dat");
-            System.out.println(test.solve());
+            System.out.println(test.solve() + " (should be 8)");
             System.out.println(test + "\n");
 
+            test = new Maze("data2.dat");
+            System.out.println(test.solve() + " (should be 58)");
+            System.out.println(test + "\n");
 
+            test = new Maze("data3.dat");
+            System.out.println(test.solve() + " (should be 58)");
+            System.out.println(test + "\n");
         } catch (FileNotFoundException e) {
             System.out.println("6. Wrong Exception Caught!\n");
         }
