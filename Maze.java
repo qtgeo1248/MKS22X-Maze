@@ -6,7 +6,7 @@ public class Maze {
     private boolean animate;
 
     public Maze(String filename) throws FileNotFoundException {
-        File f = new File("Maze1.txt");
+        File f = new File(filename);
         Scanner in = new Scanner(f);
         int numRows = 0;
         int numCols = 0;
