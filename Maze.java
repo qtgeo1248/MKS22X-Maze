@@ -96,6 +96,8 @@ public class Maze {
             System.out.println(this);
             wait(20);
         }
-        return 0; //temp
+
+
+        return -1; //temp
     }
 }
