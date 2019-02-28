@@ -64,4 +64,10 @@ public class Maze {
         //erase terminal, go to top left of screen.
         System.out.println("\033[2J\033[1;1H");
     }
+
+    public String toString() {
+        for (int i = 0; i < maze.length; i++) {
+            System.out.println(Arrays.toString(maze[i]));
+        }
+    }
 }
