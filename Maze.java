@@ -75,4 +75,17 @@ public class Maze {
         }
         return toReturn.substring(0, toReturn.length() - 1);
     }
+
+    public int solve() {
+        int Ex, Ey, Sx, Sy = 0;
+        for (int i = 1; i < maze.length - 1; i++) { //did this because I know outer edges are #'s'
+            for (int j = 1; j < maze[i].length - 1; j++) {
+                if (maze[i][j] == 'S') {
+                    Sx = j; //Note j is xcor and i is ycor
+                    Sy = i;
+                }
+            }
+        }
+        return 0;
+    }
 }
