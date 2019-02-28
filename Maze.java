@@ -10,6 +10,7 @@ public class Maze {
         Scanner in = new Scanner(f);
         int numRows = 0;
         int numCols = 0;
+        animate = false;
 
         while (in.hasNextLine()) { //this prints out each line
             String line = in.nextLine();
@@ -100,7 +101,6 @@ public class Maze {
             System.out.println(this);
             wait(20);
         }
-        if
 
         return -1; //temp
     }
