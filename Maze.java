@@ -49,6 +49,10 @@ public class Maze {
             }
             currentRow++;
         }
+
+        if (!hasStart || !hasGoal) { //does the case of no E's or no S's
+            throw new IllegalStateException();
+        }
     }
 
     private void wait(int millis) {
