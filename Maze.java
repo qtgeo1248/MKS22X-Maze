@@ -87,6 +87,9 @@ public class Maze {
                 }
             }
         }
-        return 0;
+        return 0; //temp
+    }
+    public int solve(int row, int col) { //MAKE PIRVATE LATER
+        return 0; //temp
     }
 }
