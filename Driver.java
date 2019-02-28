@@ -24,7 +24,9 @@ public class Driver {
 
         try {
             Maze test = new Maze("data1.dat");
-            System.out.println(test);
+            System.out.println(test + "\n");
+
+
         } catch (FileNotFoundException e) {
             System.out.println("Wrong Exception Caught!\n");
         }
