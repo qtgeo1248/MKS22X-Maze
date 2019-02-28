@@ -7,5 +7,19 @@ public class Driver {
         } catch (FileNotFoundException e) {
             System.out.println("Exception Caught!\n");
         }
+        try {
+            Maze test = new Maze("wrong1.dat");
+        } catch (IllegalStateException e) {
+            System.out.println("Exception Caught!\n");
+        } catch (FileNotFoundException e) {
+            System.out.println("Wrong Exception Caught!\n");
+        }
+        try {
+            Maze test = new Maze("wrong2.dat");
+        } catch (IllegalStateException e) {
+            System.out.println("Exception Caught!\n");
+        } catch (FileNotFoundException e) {
+            System.out.println("Wrong Exception Caught!\n");
+        }
     }
 }
