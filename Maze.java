@@ -107,17 +107,22 @@ public class Maze {
             return 0;
         } else if (maze[row][col] == ' ') {
             maze[row][col] = '@';
-            int count = 0;
-            for (int i = 0; i < OPTIONS.length; i += 2) {
-                if (solve(row + OPTIONS[i], col + OPTIONS[i]) != -1) {
-                    count++;
+            boolean foundWay = false;
+            int step = 0;
+            for (int i = 0; i < OPTIONS.length && !foundWay; i += 2) {
+                int current = solve(row + OPTIONS[i], col + OPTIONS[i]) + 1;
+                if (current >= 0) {
+                    foundWay = true;
+                    step = current + 1;
+                } else {
+                    step += current;
                 }
             }
-            if (count == -4) { //this is when you're at a dead end
+            if (step == -4) { //this is when you're at a dead end
                 maze[row][col] = '.';
                 return -1;
-            } else {
-                return count;
+            } else { //when
+                return step;
             }
         } else { //these are cases when it's '@', '.', or '#'
             return -1;
