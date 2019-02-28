@@ -77,7 +77,8 @@ public class Maze {
     }
 
     public int solve() {
-        int Si, Sj = 0;
+        int Si = 0;
+        int Sj = 0;
         for (int i = 1; i < maze.length - 1; i++) { //did this because I know outer edges are #'s'
             for (int j = 1; j < maze[i].length - 1; j++) {
                 if (maze[i][j] == 'S') {
