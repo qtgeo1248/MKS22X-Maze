@@ -107,12 +107,17 @@ public class Maze {
             return 0;
         } else if (maze[row][col] == ' ') {
             maze[row][col] = '@';
-            int count = solve(row + 1, col) + solve(row, col + 1) + solve(row - 1, col) + solve(row, col - 1);
+            int count = 0;
+            for (int i = 0; i < OPTIONS.length; i += 2) {
+                if (solve(row + OPTIONS[i], col + OPTIONS[i]) != -1) {
+                    count++;
+                }
+            }
             if (count == -4) { //this is when you're at a dead end
                 maze[row][col] = '.';
                 return -1;
             } else {
-                return 0;
+                return count;
             }
         }
 
