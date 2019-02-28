@@ -4,13 +4,14 @@ import java.io.*;
 public class Maze {
     private char[][] maze;
     private boolean animate;
+    private static int[] OPTIONS = {1, 0, 0, 1, -1, 0, 0, -1};;
 
     public Maze(String filename) throws FileNotFoundException {
+        animate = false;
         File f = new File(filename);
         Scanner in = new Scanner(f);
         int numRows = 0;
         int numCols = 0;
-        animate = false;
 
         while (in.hasNextLine()) { //this prints out each line
             String line = in.nextLine();
@@ -110,6 +111,8 @@ public class Maze {
             if (count == -4) { //this is when you're at a dead end
                 maze[row][col] = '.';
                 return -1;
+            } else {
+                return 0;
             }
         }
 
