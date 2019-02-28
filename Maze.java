@@ -102,6 +102,10 @@ public class Maze {
             wait(20);
         }
 
+        if (maze[row][col] == 'S') {
+            return 0;
+        }
+
         return -1; //temp
     }
 }
