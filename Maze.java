@@ -66,8 +66,10 @@ public class Maze {
     }
 
     public String toString() {
+        String toReturn = "";
         for (int i = 0; i < maze.length; i++) {
-            System.out.println(Arrays.toString(maze[i]));
+            toReturn += Arrays.toString(maze[i]);
         }
+        return toReturn;
     }
 }
