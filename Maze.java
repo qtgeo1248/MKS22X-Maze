@@ -77,16 +77,16 @@ public class Maze {
     }
 
     public int solve() {
-        int Ex, Ey, Sx, Sy = 0;
+        int Ei, Ej, Si, Sj = 0;
         for (int i = 1; i < maze.length - 1; i++) { //did this because I know outer edges are #'s'
             for (int j = 1; j < maze[i].length - 1; j++) {
                 if (maze[i][j] == 'S') {
-                    Sx = j; //Note j is xcor and i is ycor
-                    Sy = i;
+                    Si = i; //Note j is xcor and i is ycor
+                    Sj = j;
                 }
                 if (maze[i][j] == 'E') {
-                    Ex = j;
-                    Ey = i;
+                    Ei = i;
+                    Ej = j;
                 }
             }
         }
