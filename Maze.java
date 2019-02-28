@@ -68,8 +68,8 @@ public class Maze {
     public String toString() {
         String toReturn = "";
         for (int i = 0; i < maze.length; i++) {
-            toReturn += Arrays.toString(maze[i]);
+            toReturn += Arrays.toString(maze[i]) + "\n";
         }
-        return toReturn;
+        return toReturn.substring(0, toReturn.length() - 1);
     }
 }
