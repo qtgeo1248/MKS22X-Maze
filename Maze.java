@@ -100,7 +100,7 @@ public class Maze {
             System.out.println(this);
             wait(20);
         }
-
+        if
 
         return -1; //temp
     }
