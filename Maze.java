@@ -77,7 +77,7 @@ public class Maze {
     }
 
     public int solve() {
-        int Ei, Ej, Si, Sj = 0;
+        int Si, Sj = 0;
         for (int i = 1; i < maze.length - 1; i++) { //did this because I know outer edges are #'s'
             for (int j = 1; j < maze[i].length - 1; j++) {
                 if (maze[i][j] == 'S') {
@@ -87,9 +87,14 @@ public class Maze {
                 }
             }
         }
-        return 0; //temp
+        return solve(Si, Sj); //temp
     }
     public int solve(int row, int col) { //MAKE PIRVATE LATER
+        if (animate) {
+            clearTerminal();
+            System.out.println(this);
+            wait(20);
+        }
         return 0; //temp
     }
 }
