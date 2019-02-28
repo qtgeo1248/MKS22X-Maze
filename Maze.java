@@ -83,10 +83,7 @@ public class Maze {
                 if (maze[i][j] == 'S') {
                     Si = i; //Note j is xcor and i is ycor
                     Sj = j;
-                }
-                if (maze[i][j] == 'E') {
-                    Ei = i;
-                    Ej = j;
+                    maze[i][j] = ' ';
                 }
             }
         }
