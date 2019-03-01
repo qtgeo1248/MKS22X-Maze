@@ -46,8 +46,16 @@ public class Driver {
             System.out.println(test + "\n");
 
             test = new Maze("data3.dat");
-            System.out.println(test.solve() + " (should be 58)");
+            System.out.println(test.solve() + " (should be 146)");
             System.out.println(test + "\n");
+
+            test = new Maze("maze4.dat");
+            System.out.println(test.solve() + " (should be 1296)");
+            System.out.println(/*test + */"Maze is too large to be printed out lol");
+
+            test = new Maze("maze5.dat");
+            System.out.println(test.solve() + " (should be 1296)");
+            System.out.println(/*test + */"Maze is too large to be printed out lol");
         } catch (FileNotFoundException e) {
             System.out.println("6. Wrong Exception Caught!\n");
         }
