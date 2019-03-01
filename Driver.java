@@ -49,13 +49,20 @@ public class Driver {
             System.out.println(test.solve() + " (should be 146)");
             System.out.println(test + "\n");
 
-            test = new Maze("maze4.dat");
+            test = new Maze("maze4.dat"); //got the mazes from thenerdshow.com/amaze.html
             System.out.println(test.solve() + " (should be 1296)");
-            System.out.println(/*test + */"Maze is too large to be printed out lol");
+            //System.out.println("Maze is too large to be printed out lol\n");
+            System.out.println(test + "\n");
 
             test = new Maze("maze5.dat");
-            System.out.println(test.solve() + " (should be 1296)");
-            System.out.println(/*test + */"Maze is too large to be printed out lol");
+            System.out.println(test.solve() + " (should be 2004)");
+            //System.out.println("Maze is too large to be printed out lol\n");
+            System.out.println(test + "\n");
+
+            test = new Maze("maze6.dat");
+            System.out.println(test.solve() + " (should be 8178)");
+            System.out.println("Maze is too large to be printed out lol\n");
+            //System.out.println(test + "\n");
         } catch (FileNotFoundException e) {
             System.out.println("6. Wrong Exception Caught!\n");
         }
